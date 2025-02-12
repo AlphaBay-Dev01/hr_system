@@ -1,0 +1,2 @@
+[12/02/2025 22:38:03] Error: connect ECONNREFUSED ::1:3306
+[12/02/2025 22:38:03] Error: connect ECONNREFUSED ::1:3306

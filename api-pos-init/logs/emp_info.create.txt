@@ -1,0 +1,4 @@
+[12/02/2025 15:23:18] Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+[12/02/2025 15:23:53] Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+[12/02/2025 15:31:22] Error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+[12/02/2025 15:32:15] TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.

@@ -1,0 +1,14 @@
+1.
+> npm create vite@latest
+>  cd PC_Shop 
+>  npm install
+>  npm run dev 
+
+2.
+ >   npm install react-router-dom
+ >   npm install antd
+ >   npm install @ant-design/icons  
+ >   npm install antd icons
+ >   npm install react-icon
+ >   npm install axios
+ >   taiwlind css // css framework like boostrap

@@ -1,0 +1,4 @@
+CRUD
+  -table name : employee
+  -build getlish, create, update ,delete
+  - using in react

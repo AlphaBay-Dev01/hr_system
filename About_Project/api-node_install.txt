@@ -1,0 +1,8 @@
+
+
+> npm init
+> npm install express
++ create index.js
+> npm install mysql2
+> npm install moment
+> npm install -d nodemon

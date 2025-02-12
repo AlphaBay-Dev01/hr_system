@@ -1,0 +1,1 @@
+[12/02/2025 19:33:22] TypeError: Cannot read properties of undefined (reading 'name')
