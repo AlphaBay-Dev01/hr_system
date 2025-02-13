@@ -53,28 +53,76 @@ const items = [
         key: "recruitment",
         label: "Recruitment",  
         icon: <DesktopOutlined />,
-        children: null
+        children: [
+          {
+            key: "candidates",
+            label: "Candidates",
+            icon: <AiOutlineUserSwitch />,
+          },
+          {
+            key: "career_Site",
+            label: "Career_Site",
+            icon: <MdWorkOutline />,
+          },
+          {
+            key: "job",
+            label: "Jobs",
+            icon: <MdWorkOutline />,
+          },
+          {
+            key: "my_referral",
+            label: "My Referral",
+            icon: <AiOutlineUserSwitch />,
+          }, 
+        ]
     }, 
     {
-      key: "candidates",
-      label: "Candidates",
-      icon: <AiOutlineUserSwitch />,
+      key: "Organization",
+      label: "Organization",
+      icon: <SlOrganization />,
+      children: [
+        {
+          key: "structure",
+          label: "Strucutre",
+          icon: <TeamOutlined />,
+        }, 
+        {
+          key: "employee",
+          label: "Employee",
+          icon: <RiTeamLine />,
+          children: null,
+        },
+        {
+          key: "report",
+          label: "Report",
+          icon: <HiOutlineDocumentReport />,
+        },
+       ]
+
     },
     {
-      key: "career_Site",
-      label: "Career_Site",
-      icon: <MdWorkOutline />,
+      key: "finance",
+      label: "Finance",
+      icon: <HiOutlineBanknotes />,
+      children: [
+        {
+          key: "billing",
+          label: "Billing",
+          icon: <AiOutlineFileProtect />,
+        },
+        {
+          key: "invoices",
+          label: "Invoices",
+          icon: <LiaFileInvoiceDollarSolid />,
+        },
+        {
+          key: "payroll",
+          label: "Payroll",
+          icon: <FaCcMastercard />,
+        }, 
+      ]
     },
-    {
-      key: "job",
-      label: "Jobs",
-      icon: <MdWorkOutline />,
-    },
-    {
-      key: "my_referral",
-      label: "My Referral",
-      icon: <AiOutlineUserSwitch />,
-    }, 
+    
     {
       key: " ",
       label: "Department",
@@ -121,22 +169,7 @@ const items = [
           icon: <LiaUserShieldSolid />,
         },
 
-            {
-              key: "employee",
-              label: "Employee",
-              icon: <RiTeamLine />,
-              children: null,
-            },
-            {
-              key: "report",
-              label: "Report",
-              icon: <HiOutlineDocumentReport />,
-            },
-            {
-              key: "structure",
-              label: "Strucutre",
-              icon: <TeamOutlined />,
-            }, 
+           
         
       ],
       
@@ -145,28 +178,22 @@ const items = [
       key: "report",
       label: "Report",
       icon: <HiOutlineDocumentReport />,
-      children: [
-        {
-
-        }
-      ]
+      children: null
     },
+    {
+      key: "chart",
+      label: "Chart",
+      icon: <PieChartOutlined />,
+      children: null
+    },
+    {
+      ket: "table",
+      label: "Table",
+      icon: <PiTreeStructureThin />,
+      children: null
+    }
     
-    {
-      key: "billing",
-      label: "Billing",
-      icon: <AiOutlineFileProtect />,
-    },
-    {
-      key: "invoices",
-      label: "Invoices",
-      icon: <LiaFileInvoiceDollarSolid />,
-    },
-    {
-      key: "payroll",
-      label: "Payroll",
-      icon: <FaCcMastercard />,
-    }, 
+   
 ];
 
 const MainLayout = () => {
@@ -207,6 +234,18 @@ const navigate = useNavigate();
             margin: '16px 16px',
           }}
         >
+          {/* <Breadcrumb
+            style={{
+              margin: '16px 0',
+            }}
+          >
+            <Breadcrumb.Item >
+              <UserOutlined />  User
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <FileOutlined /> 
+            </Breadcrumb.Item>
+          </Breadcrumb> */}
           <div
             style={{
               padding: 10,
