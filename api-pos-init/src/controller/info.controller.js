@@ -13,33 +13,37 @@ exports.getList = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
-        const [list] = await db.query("INSERT INTO employeeprofile")
+        var sql = "INSERT INTO  tabletesting (name,gender) VALUES (:name,:gender)"; 
+        const [list] = await db.query(sql,{
+            name: req.body.name,
+            gender: req.body.gender
+        });
         res.json({
             data: list,
         })
     }catch (error) {
-        logError("employeeprofile.create", error, res)
+        logError("tabletesting.create", error, res)
        }
 };
 
 exports.update = async (req, res) => {
     try {
-        const [list] = await db.query("UPDATE employeeprofile SET name = 'John' WHERE id = 1");
+        const [list] = await db.query("UPDATE tabletesting SET name = 'John' WHERE id = 1");
         res.json({
             data: list,
         });
     } catch (error) {
-        logError("employeeprofile.update", error, res);
+        logError("tabletesting.update", error, res);
     }
 }; 
 exports.remove = async (req, res) => {
     try {
-        const [list] = await db.query("DELETE FROM emp_info WHERE id = 1");
+        const [list] = await db.query("DELETE FROM tabletesting WHERE id = 1");
         res.json({
             data: list,
         });
     } catch (error) {
-        logError("emp_info.remove", error, res);
+        logError("tabletesting.remove", error, res);
     }
 };
 

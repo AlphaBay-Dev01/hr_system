@@ -50,6 +50,11 @@ const items = [
       icon: <RiMessengerLine />,
     },
     {
+      key: "timesheet",
+      label: "attendence",
+      icon: <RiMessengerLine />,
+    },
+    {
         key: "recruitment",
         label: "Recruitment",  
         icon: <DesktopOutlined />,
@@ -234,18 +239,7 @@ const navigate = useNavigate();
             margin: '16px 16px',
           }}
         >
-          {/* <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-            <Breadcrumb.Item >
-              <UserOutlined />  User
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <FileOutlined /> 
-            </Breadcrumb.Item>
-          </Breadcrumb> */}
+          
           <div
             style={{
               padding: 10,

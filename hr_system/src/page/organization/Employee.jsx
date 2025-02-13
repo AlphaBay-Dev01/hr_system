@@ -5,6 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi"; 
 import { IoPersonAddOutline } from "react-icons/io5";
 
+
 import moment from 'moment'; // For date formatting
 const Employee = () => {
   const [list, setList] = useState([])
@@ -49,8 +50,9 @@ const Employee = () => {
       ...state,
       visibleModal: false });
   }
-  const onSave =   () => {
-   const res = request("employeeprofile", "post")
+  const onSave = async  () => {
+   const res = request("employeeprofile", "post",data)
+   console.log(res)
   }
 
   return (
@@ -60,9 +62,6 @@ const Employee = () => {
       <div> 
           <Input onChange={(e) => setState({...state, name: e.target.value })} paddings="10px" type="text" placeholder="Name" />
           <Input onChange={(e) => setState({...state, gender: e.target.value })} paddings="10px" type="text" placeholder="Gender" />
-          <Input onChange={(e) => setState({...state, dateOfBirth: e.target.value })} paddings="10px" type="date" placeholder="Date of Birth" />
-          <Input onChange={(e) => setState({...state, email: e.target.value })} paddings="10px" type="text" placeholder="Email" />
-          <Input onChange={(e) => setState({...state, phone: e.target.value })}  paddings="10px"type="text" placeholder="Phone" />
          <space className='mt-2'>
          <Button type='primary' >Cancel</Button>
          <Button onClick={onSave} style={{marginLeft: '3px'}} type='primary' >Save Data</Button>
@@ -86,34 +85,6 @@ const Employee = () => {
           key: 'Gender',
           title: "Gender",
           dataIndex: 'Gender',
-        },
-        {
-          key: 'DateOfBirth',
-          title: "Date of Birth",
-          dataIndex: 'DateOfBirth',
-          render: (date) => {
-            // Format the date to display only YYYY-MM-DD
-            return date ? moment(date).format('YYYY-MM-DD') : 'N/A';
-          },
-        },
-        {
-          key: 'Email',
-          title: "Email",
-          dataIndex: 'Email',
-        },
-        {
-          key: 'Phone',
-          title: "Phone",
-          dataIndex: 'Phone',
-        },
-        {
-          key: 'DateView',
-          title: "DateView",
-          dataIndex: 'DateView',
-          render: (date) => {
-            // Format the date to display only YYYY-MM-DD
-            return date ? moment(date).format('YYYY-MM-DD') : 'N/A';
-          },
         },
         {
           key: "Action",
